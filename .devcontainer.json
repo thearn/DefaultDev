@@ -1,0 +1,11 @@
+{
+    "name": "OpenMDAO and Dymos latest",
+    "build": {
+        "context": ".",
+        "dockerfile": "Dockerfile"
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    // Additional configuration like extensions, settings, etc.
+}
