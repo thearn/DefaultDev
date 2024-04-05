@@ -4,8 +4,5 @@
         "context": ".",
         "dockerfile": "Dockerfile"
     },
-    "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-    ],
-    // Additional configuration like extensions, settings, etc.
+    "onCreateCommand" : "chmod a+x run_quick_test.sh && /bin/sh run_quick_test.sh"
 }
