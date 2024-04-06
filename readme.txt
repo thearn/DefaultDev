@@ -7,3 +7,10 @@ pytoptsparse is installed with IPOPT, but not SNOPT.
 
 This directory is mounted into the container by default.
 This can be used as the starting point for generic projects.
+
+pip uninstall -y pyoptsparse
+apt-get update && apt-get install make g++ pkgconf
+git clone https://github.com/OpenMDAO/build_pyoptsparse.git
+pip install build_pyoptsparse/
+build_pyoptsparse -v -s snopt_src/
+rm -rf build_pyoptsparse/

@@ -6,7 +6,7 @@ echo "\n"
 
 echo "Testing MPI/PetSC..."
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
-python test/run_petsc.py
+mpirun -np 2 python test/run_petsc.py 
 echo "\n"
 
 echo "Testing OpenMDAO quickstart sample..."
